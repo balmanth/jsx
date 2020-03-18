@@ -1,0 +1,42 @@
+{
+  "name": "@balmanth/jsx-core",
+  "description": "A set of functions and classes to build interfaces using a custom JSX over TypeScript.",
+  "version": "0.0.0-alpha",
+  "type": "commonjs",
+  "main": "release/module.js",
+  "types": "types/module.d.ts",
+  "keywords": [],
+  "author": {
+    "name": "Silas B. Domingos",
+    "email": "hello@balmante.eti.br",
+    "url": "https://balmante.eti.br"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/balmanth/jsx-core.git"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "@balmanth/differs": "github:balmanth/differs",
+    "@balmanth/objects": "github:balmanth/objects"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.2",
+    "typescript": "^3.8.3"
+  },
+  "prettier": {
+    "endOfLine": "lf",
+    "trailingComma": "none",
+    "printWidth": 120,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "semi": true
+  },
+  "scripts": {
+    "build": "npm run clean && npm run make",
+    "clean": "rm -rf ./release && rm -rf ./types/*.d.ts && rm -rf ./types/attachments",
+    "make": "npx tsc -p ./source"
+  }
+}
